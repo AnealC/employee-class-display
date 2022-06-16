@@ -1,0 +1,42 @@
+
+# class name
+class Employee:
+    # class attributes
+    def __init__(self, name, id_num, department, job):
+        self.__name = name
+        self.__id_num = id_num
+        self.__department = department
+        self.__job = job
+
+    # setter function for name
+    def set_name(self, name):
+        self.__name = name
+
+    # setter function for id_number
+    def set_id_num(self, id_num):
+        self.__id_num = id_num
+
+    # setter function for department
+    def set_department(self, department):
+        self.__department = department
+
+    # Setter function for job
+    def set_job(self, job):
+        self.__job = job
+
+    # Accessors
+    # accessor for name
+    def get_name(self, name):
+        return self.__name
+
+    # accessor for ID
+    def get_id_num(self, id_num):
+        return self.__id_num
+
+    # accessor for department
+    def get_department(self, department):
+        return self.__department
+
+    # accessor for job
+    def get_job(self, job):
+        return self.__job
