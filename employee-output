@@ -1,0 +1,91 @@
+#------------------------------------------------------------------------------------------------
+#  Copyright (c) 2022 by Aaron Neal Crawford
+#------------------------------------------------------------------------------------------------
+#  Purpose of Program:
+#  Output 3 instances of class Employee based on user input
+#=================================================================================================
+# Data Dictionary
+#  Name                     Type          Range         Use
+#  ------                   -----         ----------    -----------------------------------------
+#  Employee                 class
+#=================================================================================================
+#  Functions used:
+#  Name                  Inputs           Use
+#  ------                ------------     --------------------------------------------------------
+#  main()                                 Takes user input 3 times and saves the inputs to attributes
+#                                         into three different instances. Those instances are then
+#                                         printed accordingly.
+#=================================================================================================
+
+# import class Employee from employee.py
+import employee
+
+#====================================================================================
+# Function name: main()     Author: Aaron Crawford
+# Date Written: May 7, 2022
+#====================================================================================
+# Purpose of Function: Compares input to the keys in all dictionaries, outputs
+#                      course information if key is validated
+#====================================================================================
+# Data Dictionary
+#  Name            Type          Range          Use
+#  ------          -----         ----------     ----------------------------
+# new_name         input                        user input for name of instance
+# new_id_num       input                        user input for id number of instance
+# new_department   input                        user input for department of instance
+# new_job          input                        user input for job of instance
+# my_employee1     var                          variable that holds the instance
+# my_employee2     var                          variable that holds the instance
+# my_employee3     var                          variable that holds the instance
+#
+#====================================================================================
+# Start taking input
+def main():
+    # Take all inputs for instance 1
+    new_name = input("Enter employee name: ")
+    new_id_num = input('Enter employee ID: ')
+    new_department = input('Enter department: ')
+    new_job = input('Enter position: ')
+    print()
+    # save attributes from input into my_employee1
+    my_employee1 = employee.Employee(new_name, new_id_num, new_department, new_job)
+
+    # Take all inputs for instance 2
+    new_name = input("Enter employee name: ")
+    new_id_num = input('Enter employee ID: ')
+    new_department = input('Enter department: ')
+    new_job = input('Enter position: ')
+    print()
+    # save attributes from input into my_employee2
+    my_employee2 = employee.Employee(new_name, new_id_num, new_department, new_job)
+
+    # Take all inputs for instance 3
+    new_name = input("Enter employee name: ")
+    new_id_num = input('Enter employee ID: ')
+    new_department = input('Enter department: ')
+    new_job = input('Enter position: ')
+    print()
+    # save attributes from input into my_employee2
+    my_employee3 = employee.Employee(new_name, new_id_num, new_department, new_job)
+
+    # print results of instance 1
+    print('Employee 1:', '\n'
+          'Name:', my_employee1.get_name(new_name), '\n'
+          'ID:', my_employee1.get_id_num(new_id_num), '\n'
+          'Department:', my_employee1.get_department(new_department), '\n'
+          'Position:', my_employee1.get_job(new_job), '\n')
+    # print results of instance 2
+    print('Employee 2:', '\n'
+          'Name:', my_employee2.get_name(new_name), '\n'
+          'ID:', my_employee2.get_id_num(new_id_num), '\n'
+          'Department:', my_employee2.get_department(new_department), '\n'
+          'Position:', my_employee2.get_job(new_job), '\n')
+    # print results of instance 3
+    print('Employee 3:', '\n'
+          'Name:', my_employee3.get_name(new_name), '\n'
+          'ID:', my_employee3.get_id_num(new_id_num), '\n'
+          'Department:', my_employee3.get_department(new_department), '\n'
+          'Position:', my_employee3.get_job(new_job), '\n')
+
+
+main()
